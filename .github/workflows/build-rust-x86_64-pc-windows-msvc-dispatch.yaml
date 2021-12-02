@@ -7,11 +7,11 @@ on:
         description: 'Branch of rust-build to use'
         required: true
         default: 'main'
-      release_ver:
+      release_version:
         description: 'Release Version for generation'
         required: true
         default: '1.56.0.1'
-      rust_ver:
+      rust_version:
         description: 'Version of esp rust to use'
         required: true
         default: '1.56.0'
