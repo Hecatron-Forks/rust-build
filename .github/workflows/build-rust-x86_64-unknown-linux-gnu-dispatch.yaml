@@ -33,6 +33,7 @@ jobs:
           llvm_root_option: ''
 
     steps:
+      - uses: szenius/set-timezone@v1.0
       - uses: actions/checkout@v2
         with:
           path: "rust-build"
