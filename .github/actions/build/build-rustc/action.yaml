@@ -42,17 +42,17 @@ runs:
       shell: bash
       run: python3 x.py build --exclude src/doc --stage 2 compiler/rustc
 
-    - name: Dist with x.py - Compiler
-      if: startsWith(matrix.os, 'macos') || startsWith(matrix.os, 'ubuntu')
-      working-directory: ${{ env.work_dir }}
-      shell: bash
-      run: python3 x.py dist --stage 2 src/librustc
+    #- name: Dist with x.py - Compiler
+    #  if: startsWith(matrix.os, 'macos') || startsWith(matrix.os, 'ubuntu')
+    #  working-directory: ${{ env.work_dir }}
+    #  shell: bash
+    #  run: python3 x.py dist --stage 2 src/librustc
 
 
     # Save the result
 
-    - name: Save Artifact - Rustc
-      uses: actions/upload-artifact@v2
-      with:
-        name: rustc-${{ env.build_suffix }}.tar.xz
-        path: ${{ env.dist_dir }}/rustc-${{ env.build_suffix }}.tar.xz
+    #- name: Save Artifact - Rustc
+    #  uses: actions/upload-artifact@v2
+    #  with:
+    #    name: rustc-${{ env.build_suffix }}.tar.xz
+    #    path: ${{ env.dist_dir }}/rustc-${{ env.build_suffix }}.tar.xz
