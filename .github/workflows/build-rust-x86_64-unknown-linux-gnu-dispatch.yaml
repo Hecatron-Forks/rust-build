@@ -44,8 +44,8 @@ jobs:
       - uses: ./rust-build/.github/actions/tools/setup-ninja
       - uses: ./rust-build/.github/actions/util/checkout-esp-rust
       - uses: ./rust-build/.github/actions/util/symlink-working-dir
-      - uses: ./rust-build/.github/actions/build/build-rustc
-      #- uses: ./rust-build/.github/actions/build/build-rust-std
+      #- uses: ./rust-build/.github/actions/build/build-rustc
+      - uses: ./rust-build/.github/actions/build/build-rust-std
 
 
 #  build-tools:
