@@ -32,6 +32,9 @@ runs:
         # release version
         echo "archive_dir=rust-${{ github.event.inputs.rust_version }}-dev-${{ matrix.target_name }}" >> $GITHUB_ENV
 
+        # Debug rust build
+        echo "RUST_BACKTRACE=1" >> $GITHUB_ENV
+
     - name: Setup Env Variables - Windows
       if: startsWith(matrix.os, 'windows')
       shell: bash
